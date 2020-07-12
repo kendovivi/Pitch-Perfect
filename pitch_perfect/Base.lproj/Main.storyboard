@@ -31,7 +31,6 @@
                                 <connections>
                                     <action selector="recordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Nx-1o-JMZ"/>
                                     <action selector="stopRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtO-i0-48j"/>
-                                    <segue destination="OAg-87-vri" kind="show" id="RxO-qj-R9F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3N-IX-3Ri">
@@ -58,16 +57,17 @@
                         <outlet property="recordButton" destination="d3N-IX-3Ri" id="zSO-KI-jXZ"/>
                         <outlet property="recordingLabel" destination="shU-hN-c8W" id="Qw6-rA-D08"/>
                         <outlet property="stopButton" destination="khH-K7-hGS" id="GXF-u2-URr"/>
+                        <segue destination="OAg-87-vri" kind="show" identifier="stopRecording" id="aVH-0t-FDl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="wIP-wG-ZxA">
             <objects>
-                <viewController id="OAg-87-vri" sceneMemberID="viewController">
+                <viewController id="OAg-87-vri" customClass="PlaySoundsViewController" customModule="pitch_perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iVg-FV-mcb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
