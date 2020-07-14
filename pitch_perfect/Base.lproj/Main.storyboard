@@ -29,15 +29,14 @@
                                 </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="recordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Nx-1o-JMZ"/>
-                                    <action selector="stopRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtO-i0-48j"/>
+                                    <action selector="stopRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bam-J9-JG1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3N-IX-3Ri">
                                 <rect key="frame" x="129.66666666666666" y="397.66666666666669" width="154.99999999999997" height="155.00000000000006"/>
                                 <state key="normal" image="Record"/>
                                 <connections>
-                                    <action selector="recordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Avp-DD-vYp"/>
+                                    <action selector="doRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aoO-7y-vUS"/>
                                 </connections>
                             </button>
                         </subviews>

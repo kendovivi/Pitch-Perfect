@@ -23,7 +23,7 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
     }
 
 
-    @IBAction func recordButton(_ sender: Any) {
+    @IBAction func doRecord(_ sender: Any) {
         recordingLabel.text = "recording in progress"
         recordButton.isEnabled = false
         stopButton.isEnabled = true
@@ -37,6 +37,7 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
         try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
 
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -53,7 +54,6 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        print("audioRecorderDidFinishRecording")
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
