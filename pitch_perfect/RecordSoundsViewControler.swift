@@ -62,6 +62,17 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
             let playSoundsVC = segue.destination as! PlaySoundsViewController
             let recordAudioURL = sender as! URL
             playSoundsVC.recordedAudioURL = recordAudioURL
+        } else {
+            let alert = UIAlertController()
+            alert.title = "oops!"
+            alert.message = "prepare segue failed"
+            
+            let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertAction.Style.default,
+                                                             handler: { (UIAlertAction) in
+            })
+            alert.addAction(okAction)
+            
+            present(alert, animated: true, completion: nil)
         }
     }
     
